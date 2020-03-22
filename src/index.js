@@ -101,8 +101,9 @@ function calculator (expr){
         }
         else
             if(element == "(") {
-                NumbersStack.push(...(OperationStack.reverse()));
-                OperationStack=[element];
+               // NumbersStack.push(...(OperationStack.reverse()));
+                // OperationStack=[element];
+                OperationStack.push(element);
             }
         else 
             if( element ==')'){
@@ -143,3 +144,5 @@ function expressionCalculator(expression) {
 module.exports = {
     expressionCalculator
 }
+
+// console.log(expressionCalculator("99 - 78 * (  (  (  63 + 52 / 67 + 26 / 29  ) + 94 + (  68 - 11 / 1 * 88  ) + 49  ) / 69 * 15 * 8  ) - 1"));
